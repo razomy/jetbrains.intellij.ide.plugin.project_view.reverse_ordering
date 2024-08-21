@@ -5,7 +5,6 @@ import com.intellij.ide.projectView.NodeSortKey
 import com.intellij.ide.projectView.NodeSortSettings
 import com.intellij.ide.projectView.ProjectView
 import com.intellij.ide.projectView.ProjectViewNode
-import com.intellij.ide.projectView.impl.GroupByTypeComparator
 import com.intellij.ide.util.treeView.AlphaComparator
 import com.intellij.ide.util.treeView.NodeDescriptor
 import com.intellij.openapi.project.Project
