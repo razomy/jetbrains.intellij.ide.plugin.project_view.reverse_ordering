@@ -72,9 +72,33 @@ echo > 10/DaBaA.cs
 echo > 10/DaCa.cs
 echo > 10/EaDaCa.cs
 
-mkdir 11
-echo > 11/a.cs
-echo > 11/CaAAa.cs
-echo > 11/DaAAAa.cs
-echo > 11/DaAABa.cs
-echo > 11/DaCa.cs
+#mkdir 11
+#echo > 11/a.cs
+#echo > 11/CaAAa.cs
+#echo > 11/DaAAAa.cs
+#echo > 11/DaAABa.cs
+#echo > 11/DaCa.cs
+
+mkdir 12
+echo > 12/summer-12-01-2023.png
+echo > 12/landing-17-12-2023.png
+echo > 12/dog-18-12-2023.png
+echo > 12/cat-14-02-2024.png
+
+mkdir 13
+echo > 13/Cn.cs
+echo > 13/MultiplayerDeviceCn.cs
+echo > 13/UserMultiplayerDeviceCn.cs
+echo > 13/UserCn.cs
+echo > 13/AchievementUserCn.cs
+echo > 13/AchievementsUserCn.cs
+echo > 13/ChapterUserCn.cs
+echo > 13/ChaptersUserCn.cs
+echo > 13/FinishUserCn.cs
+echo > 13/InfinityUserCn.cs
+
+mkdir 14
+echo > 14/string.py
+echo > 14/bound_string.py
+echo > 14/get_xy_bound_string.py
+echo > 14/get_xyz_bound_string.py

@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "com.razomy"
-version = "0.0-1"
+version = "0.0.1-2"
 
 repositories {
     mavenCentral()
@@ -36,12 +36,12 @@ tasks {
     }
 
     signPlugin {
-        certificateChain.set(System.getenv("CERTIFICATE_CHAIN"))
-        privateKey.set(System.getenv("PRIVATE_KEY"))
-        password.set(System.getenv("PRIVATE_KEY_PASSWORD"))
+        certificateChain.set(file("certificate/chain.crt").readText())
+        privateKey.set(file("certificate/private.pem").readText())
+        password.set(file("certificate/password.txt").readText())
     }
 
     publishPlugin {
-        token.set(System.getenv("PUBLISH_TOKEN"))
+        token.set(file("certificate/token.txt").readText())
     }
 }

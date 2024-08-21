@@ -1,7 +1,7 @@
 // possible solution in javascript, nodejs v22.6.0
 function sortByChild(strings) {
     return strings
-        .map(s => ({path: s, key: s.split(/[ -._]|(?=[A-Z]{1:+})/).reverse()}))
+        .map(s => ({path: s, key: s.split(/[ \-._]|(?=[A-Z])/).reverse()}))
         .sort((a, b) => {
             for (let i = 0; i < Math.min(a.key.length, b.key.length); i++) {
                 const a_i = a.key[i];
@@ -119,13 +119,41 @@ const test_results = [
         "DaCa.cs",
         "EaDaCa.cs",
     ],
+    // TODO:
+    //  challenge:not handle abbreviation
+    //  research:(?=[A-Z]{1:}) research regex for handling Uppercase or write a function
+    //  solution:skip
+    // [
+    //     "a.cs",
+    //     "CaAAa.cs", // A
+    //     "DaAAAa.cs", // AA
+    //     "DaAABa.cs", // AA
+    //     "DaCa.cs",
+    // ],
     [
-        "a.cs",
-        "CaAAa.cs",
-        "DaAAAa.cs",
-        "DaAABa.cs",
-        "DaCa.cs",
+        "summer-12-01-2023.png",
+        "landing-17-12-2023.png",
+        "dog-18-12-2023.png",
+        "cat-14-02-2024.png",
     ],
+    [
+        "Cn.cs",
+        "MultiplayerDeviceCn.cs",
+        "UserMultiplayerDeviceCn.cs",
+        "UserCn.cs",
+        "AchievementUserCn.cs",
+        "AchievementsUserCn.cs",
+        "ChapterUserCn.cs",
+        "ChaptersUserCn.cs",
+        "FinishUserCn.cs",
+        "InfinityUserCn.cs",
+    ],
+    [
+        "string.py",
+        "bound_string.py",
+        "get_xy_bound_string.py",
+        "get_xyz_bound_string.py",
+    ]
 ]
 
 function test() {

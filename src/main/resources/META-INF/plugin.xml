@@ -1,7 +1,7 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
     <!-- Unique identifier of the plugin. It should be FQN. It cannot be changed between the plugin versions. -->
-    <id>com.razomy.jetbrains.intellij.ide.plugin.project_view.reverse_ordering</id>
+    <id>com.razomy._etbrains._ntellij.ide.plugin.project_view.reverse_ordering</id>
 
     <!-- Public plugin name should be written in Title Case.
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
@@ -13,7 +13,78 @@
     <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
          Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
-    <description>Reverce ordiring of files in sorting panel</description>
+    <description><![CDATA[
+    <h1>Split Reverse Order Plugin for JetBrains IDE</h1>
+    <p>This plugin splits all filenames by <code>_</code>, <code>-</code>, <code>.</code>, [space], and <code>(?=[A-Z])</code>, then orders them in the opposite way.</p>
+
+    <h2>How to Use It</h2>
+    <ol>
+        <li>Install the plugin</li>
+        <li>In Project, select <code>ReverseOrderProject</code></li>
+        <li>In Sort, select "Select by Type"</li>
+    </ol>
+
+    <h2>Use Cases</h2>
+
+    <h3>Python file naming with nesting [child_parent]:</h3>
+    <code>
+        string.py<br>
+        bound_string.py<br>
+        get_xy_bound_string.py<br>
+        get_xyz_bound_string.py
+    </code>
+
+    <h3>Or in C#:</h3>
+    <code>
+        Cn.cs<br>
+        MultiplayerDeviceCn.cs<br>
+        UserMultiplayerDeviceCn.cs<br>
+        UserCn.cs<br>
+        AchievementUserCn.cs<br>
+        AchievementsUserCn.cs<br>
+        ChapterUserCn.cs<br>
+        ChaptersUserCn.cs<br>
+        FinishUserCn.cs<br>
+        InfinityUserCn.cs
+    </code>
+
+    <h3>Angular project, to view elements in groups:</h3>
+    <code>
+        config.ts<br>
+        config.service.ts<br>
+        timeline.service.ts<br>
+        table-timeline.service.ts<br>
+        config.model.ts<br>
+        timeline.model.ts<br>
+        table-timeline.model.ts<br>
+        config.pipe.ts<br>
+        timeline.pipe.ts<br>
+        table-timeline.pipe.ts
+    </code>
+
+    <h3>Ordered elements:</h3>
+    <code>
+        documents-1.md<br>
+        specification-2.md<br>
+        development-3.md<br>
+        products-4.md
+    </code>
+
+    <h3>Or:</h3>
+    <code>
+        summer-12-01-2023.png<br>
+        dog-18-12-2023.png<br>
+        landing-17-12-2023.png<br>
+        cat-14-02-2024.png
+    </code>
+
+    <h2>Feel free to extend and update.</h2>
+
+    <h2>References</h2>
+    <p>Discussion: <a href="https://youtrack.jetbrains.com/issue/IJPL-160446" target="_blank">https://youtrack.jetbrains.com/issue/IJPL-160446</a></p>
+    <p>Github: <a href="https://github.com/razomy/jetbrains.intellij.ide.plugin.project_view.reverse_ordering" target="_blank">https://github.com/razomy/jetbrains.intellij.ide.plugin.project_view.reverse_ordering</a></p>
+    <p>Plugin: <a href="https://plugins.jetbrains.com/plugin/25161-project-view-reverse-ordering" target="_blank">https://plugins.jetbrains.com/plugin/25161-project-view-reverse-ordering</a></p>
+    ]]></description>
 
     <!-- Product and plugin compatibility requirements.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
@@ -22,6 +93,7 @@
     <!-- Extension points defined by the plugin.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
     <extensions defaultExtensionNs="com.intellij">
-        <projectViewPane implementation="com.razomy.jetbrains.intellij.ide.plugin.project_view.reverse_ordering.ReverseOrderAbstractProjectViewPane"/>
+        <projectViewPane
+                implementation="com.razomy.jetbrains.intellij.ide.plugin.project_view.reverse_ordering.ReverseOrderAbstractProjectViewPane"/>
     </extensions>
 </idea-plugin>

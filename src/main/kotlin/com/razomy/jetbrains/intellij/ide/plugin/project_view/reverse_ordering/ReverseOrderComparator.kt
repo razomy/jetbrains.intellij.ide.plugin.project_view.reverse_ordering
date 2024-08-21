@@ -11,9 +11,11 @@ import com.intellij.ide.util.treeView.NodeDescriptor
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.util.text.StringUtil
 
+val split_regex = Regex("[ \\-._]|(?=[A-Z])")
+
 fun reverse_order_string_compare(a_string: String, b_string: String): Int {
-    val a_key = a_string.split(Regex("[ \\-._]|(?=[A-Z])")).reversed()
-    val b_key = b_string.split(Regex("[ \\-._]|(?=[A-Z])")).reversed()
+    val a_key = a_string.split(split_regex).reversed()
+    val b_key = b_string.split(split_regex).reversed()
     for (i in 0 until minOf(a_key.size, b_key.size)) {
         val a_i = a_key[i]
         val b_i = b_key[i]
@@ -97,7 +99,7 @@ open class ReverseOrderComparator : Comparator<NodeDescriptor<*>> {
 
                 NodeSortKey.BY_TYPE -> {
                     val result = reverse_order_project_view_compare(descriptor1, descriptor2)
-                    if (result != 0) return  result
+                    if (result != 0) return result
                 }
 
                 NodeSortKey.BY_TIME_DESCENDING, NodeSortKey.BY_TIME_ASCENDING -> {
