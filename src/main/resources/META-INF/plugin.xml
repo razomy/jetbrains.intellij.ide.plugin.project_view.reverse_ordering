@@ -93,7 +93,7 @@
     <!-- Extension points defined by the plugin.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
     <extensions defaultExtensionNs="com.intellij">
-        <projectViewPane
-                implementation="com.razomy.jetbrains.intellij.ide.plugin.project_view.reverse_ordering.ReverseOrderAbstractProjectViewPane"/>
+        <projectViewPane implementation="com.razomy.jetbrains.intellij.ide.plugin.project_view.reverse_ordering.ReverseOrderAbstractProjectViewPane"/>
+        <projectViewPane implementation="com.razomy.jetbrains.intellij.ide.plugin.project_view.reverse_ordering.ConfigOrderAbstractProjectViewPane"/>
     </extensions>
 </idea-plugin>
